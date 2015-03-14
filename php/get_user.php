@@ -21,7 +21,7 @@
 	if ($array->num_rows > 0) {
 	    while($row = $array->fetch_assoc()) {
 	    	if (isset($row['bruker_id'])) {
-	    		setcookie('user_id', hash(sha1, $row['bruker_id']), time() + (86400), "/");
+	    		setcookie('user_id', hash(sha1, $row['bruker_id']), time() + (86400 * 7), "/");
 	    	}
 	    }
 	}

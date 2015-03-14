@@ -68,7 +68,7 @@ p.credits {
 .alert-danger {
 	display: none;
 }
-.alert {
+.ajax-response {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
@@ -139,6 +139,24 @@ a.btn-technology {
 }
 .close:visited, .close:hover, .close:active {
 	color: #666;
+}
+.melding {
+    width: 100%;
+    z-index: 3;
+    top: 25%;
+    position: fixed;
+    display: none;
+}
+.logout {
+    top: 5px;
+    right: 5px;
+    position: absolute;
+}
+.logout a {
+    color: #666;
+}
+.logout a:hover {
+    color: #222;
 }
 /*
 tbody.ledige-rom {

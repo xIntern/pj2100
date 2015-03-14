@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    
+    if (getCookie('closed_msg') != '1') {
+        $('.melding').show();
+    }
 
 	$('#tid .close').click(function() {
 		$('#tid').hide();
@@ -7,6 +11,23 @@ $(document).ready(function() {
 	$('p.credits').click(function() {
 		$('ul.credits').slideToggle(500);
 	});
+
+	$('#select').change(function() {
+		$(this).removeClass('required');
+	});
+
+	$('#dato').change(function() {
+		brukervalgt_tid();
+	});
+    
+    $('.alert-dismissible').click(function() {
+        $(this).hide();
+        setCookie('closed_msg', '1', '7');
+    });
+    
+    $('.logout').click(function() {
+        delete_cookie('user_id', '/');
+    });
 
 	$('a.btn-search').click(function() {
 		var kap = $('#select').val();
@@ -26,10 +47,6 @@ $(document).ready(function() {
 		}
 	});
 
-	$('#select').change(function() {
-		$(this).removeClass('required');
-	});
-
 	$('.btn-login').click(function() {
 		var bruker = $(this).prev().prev().val();
 		var pass = $(this).prev().val();
@@ -47,10 +64,16 @@ $(document).ready(function() {
 			}
 		});
 	});
-
-	$('#dato').change(function() {
-		brukervalgt_tid();
-	});
+    
+    function delete_cookie( name, path, domain ) {
+        var date = new Date();
+        if(getCookie(name)) {
+            document.cookie = name + "=" +
+            ((path) ? ";path="+path:"")+
+            ((domain)?";domain="+domain:"") +
+            ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
+        }
+    }
 
 	function brukervalgt_tid(romnr) {
 
@@ -109,25 +132,15 @@ $(document).ready(function() {
 					// $(this).append(table_stop);
 
 					var romnr = $(this).children('td:first-child').text();
-					// console.log("Før btn-klikk: " + romnr);
 
 					brukervalgt_tid(romnr);
 
 					$('#tid').show();
-
-					// $(this).append(table_stop + table_start + '<thead><tr><td>Klokkeslett</td></tr></thead><tbody>');
-					// for (var i = 0; i <= 24; i++) {
-					// 	$(this).append('<tr><td style="padding-left: 20px;">' + i + ':00</td></tr>');
-					// };
-					// $(this).append('</tbody></table>' + table_start + headers + '<tbody>');
-
-					// alert('Du har nå booket rom nr: ' + rom);
-					// ledig_tid(rom);
 				});
 			}
 		});
 	}
-
+/*
 	function tid(rom) {
 		$.ajax({
 			url: 'php/get_free_times.php',
@@ -139,28 +152,9 @@ $(document).ready(function() {
 		});
 		
 	}
-
+*/
 	function booking(rom, dato_fra, dato_til) {
 		var bruker = getCookie('user_id');
-  //       var date = new Date();
-  //       if (date.getMinutes() > 0) {
-  //       	var hrs = 1;
-  //       } else {
-  //       	hrs = 0;
-  //       }
-		// var dato_fra = date.getFullYear() + '-' +
-  //           ('00' + (date.getMonth() + 1)).slice(-2) + '-' +
-  //           ('00' + date.getDate()).slice(-2) + ' ' + 
-  //           ('00' + Math.ceil(date.getHours() + hrs)).slice(-2) + ':00:00' + 
-  //           ('00' + Math.floor(date.getMinutes())).slice(-2) + ':' + 
-  //           ('00' + Math.floor(date.getSeconds())).slice(-2);
-        
-		// var dato_til = date.getFullYear() + '-' +
-  //           ('00' + (date.getMonth() + 1)).slice(-2) + '-' +
-  //           ('00' + date.getDate()).slice(-2) + ' ' + 
-  //           ('00' + Math.ceil((date.getHours() + 2 + hrs))).slice(-2) + ':00:00'/* + 
-  //           ('00' + Math.floor(date.getMinutes())).slice(-2) + ':' + 
-  //           ('00' + Math.floor(date.getSeconds())).slice(-2)*/;
 		$.ajax({
 			url: 'php/book_room.php',
 			type: 'POST',

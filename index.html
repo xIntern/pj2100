@@ -9,14 +9,21 @@
 </head>
 <body>
 
-	<div class="alert alert-dismissable alert-success">
+	<div class="alert ajax-response alert-success">
 		<strong></strong>
 	</div>
 
-	<div class="alert alert-dismissable alert-danger">
+	<div class="alert ajax-response alert-danger">
 		<strong></strong>
 	</div>
-
+	
+    <div class="alert alert-warning alert-dismissible melding" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <p class="text-center"><strong>Databasen fungerer ikke optimalt for øyeblikket. Noen funksjoner vil ikke fungere</strong></p>
+<!--        <p class="text-center small">(Klikk for å lukke)</p>-->
+    </div>
 
 	<div id="login" class="container overlay">
 		<div class="row">
@@ -74,6 +81,12 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	
+	<div class="logout">
+        <a href="" title="Logg ut">
+	        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+        </a>
 	</div>
 
 	<div class="container">
@@ -161,7 +174,7 @@
 					<li>Simen Norløff</li>
 					<li>Andreas Larsen</li>
 					<li>Øyvind Mathisen</li>
-					<li class="small">Versjon 0.9</li>
+					<li class="small">Versjon 0.924</li>
 				</ul>
 				<p class="small text-center">2015</p>
 				<p class="text-center"><a href="/pj2100/temp">Midlertidig oversikt over bookede rom</a></p>
