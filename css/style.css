@@ -131,6 +131,15 @@ a.btn-technology {
 	margin-top: 5px;
 	width: 100%;
 }
+.credits li:last-child {
+	margin-top: 10px;
+}
+.close {
+	color: #000;
+}
+.close:visited, .close:hover, .close:active {
+	color: #666;
+}
 /*
 tbody.ledige-rom {
 	height: 200px;

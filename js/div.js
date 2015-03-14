@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+	$('#tid .close').click(function() {
+		$('#tid').hide();
+	});
+
 	$('p.credits').click(function() {
 		$('ul.credits').slideToggle(500);
 	});
