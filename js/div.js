@@ -46,24 +46,6 @@ $(document).ready(function() {
 			$('#select').addClass('required');
 		}
 	});
-
-	$('.btn-login').click(function() {
-		var bruker = $(this).prev().prev().val();
-		var pass = $(this).prev().val();
-		$.ajax({
-			url: 'php/get_user.php',
-			type: 'POST',
-			data: { brukernavn:bruker, passord:pass },
-			success: function(data) {
-				// $('.panel-heading h3').html(data);
-				if (checkCookie()) {
-					$('#login').hide();
-					$('a.btn-search').attr('disabled', false);
-					$('a.btn-search').text('Søk');
-				}
-			}
-		});
-	});
     
     function delete_cookie( name, path, domain ) {
         var date = new Date();
@@ -140,19 +122,7 @@ $(document).ready(function() {
 			}
 		});
 	}
-/*
-	function tid(rom) {
-		$.ajax({
-			url: 'php/get_free_times.php',
-			type: 'POST',
-			data: { rom : 'value1' },
-			success: function(data) {
-				$();
-			}
-		});
-		
-	}
-*/
+    
 	function booking(rom, dato_fra, dato_til) {
 		var bruker = getCookie('user_id');
 		$.ajax({

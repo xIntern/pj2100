@@ -31,9 +31,11 @@
 				<div class="popup marg-auto">
 					<h3 class="text-center">Logg på med Feide</h3>
 					<hr>
-					<input class="form-control" type="text" placeholder="Brukernavn">
-					<input class="form-control" type="password" placeholder="Passord">
-					<a href="#" class="btn btn-technology btn-login">Logg inn</a>
+					<form action="php/get_user.php" method="POST">
+                        <input class="form-control" name="brukernavn" type="text" placeholder="Brukernavn">
+                        <input class="form-control" name="passord" type="password" placeholder="Passord">
+                        <button type="submit" class="btn btn-technology btn-login">Logg inn</button>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -174,7 +176,7 @@
 					<li>Simen Norløff</li>
 					<li>Andreas Larsen</li>
 					<li>Øyvind Mathisen</li>
-					<li class="small">Versjon 0.924</li>
+					<li class="small">Versjon 0.930</li>
 				</ul>
 				<p class="small text-center">2015</p>
 				<p class="text-center"><a href="/pj2100/temp">Midlertidig oversikt over bookede rom</a></p>
