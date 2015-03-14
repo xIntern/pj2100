@@ -104,14 +104,10 @@ $(document).ready(function() {
 			success: function(data) {
 
 				var headers = '<tr><th>Romnr.</th><th>Kapasitet</th><th>Projektor</th><th>PC</th><th>Tavle</th></tr>';
-				var table_start = '<table class="table table-striped table-hover result">';
-				var table_stop = '</tbody></table>';
 
 				$('.result thead').html(headers);
 				$('.result tbody').html(data);
 				$('.result tr').click(function() {
-
-					// $(this).append(table_stop);
 
 					var romnr = $(this).children('td:first-child').text();
 
@@ -130,12 +126,12 @@ $(document).ready(function() {
 			type: 'POST',
 			data: { romnr:rom, brukerid:bruker, fra:dato_fra, til:dato_til },
 			success: function() {
-				$(".alert-success").text("Rom " + rom + " reservert");
-				$(".alert-success").slideToggle(500).delay(3250).slideToggle(500);
+				$(".ajax-response.alert-success").text("Rom " + rom + " reservert");
+				$(".ajax-response.alert-success").slideToggle(500).delay(3250).slideToggle(500);
 			},
 			error: function() {
-				$(".alert-danger").text("Noe gikk galt. Prøv igjen");
-				$(".alert-danger").slideToggle(500).delay(3250).slideToggle(500);
+				$(".ajax-response.alert-danger").text("Noe gikk galt. Prøv igjen");
+				$(".ajax-response.alert-danger").slideToggle(500).delay(3250).slideToggle(500);
 			}
 		});
 	}

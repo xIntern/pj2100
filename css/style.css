@@ -8,7 +8,7 @@ a, a:link, a:visited, a:hover, a:active {
 	margin: 20px 0;
 }
 .logo img {
-	width: 200px;
+	height: 135px;
 }
 .marg-auto {
 	margin: auto;
@@ -25,9 +25,6 @@ a, a:link, a:visited, a:hover, a:active {
 }
 .btn-search {
 	width: 100%;
-}
-.reserver-rom {
-	/*margin-bottom: 20px;*/
 }
 .container {
 	width: 100%;
@@ -60,7 +57,7 @@ p.credits {
 	margin-top: 0;
 	font-size: 1.5em;
 	position: fixed;
-	z-index: 1;
+	z-index: 50;
 }
 .alert-success {
 	display: none;
@@ -159,12 +156,3 @@ a.btn-technology {
 .logout a:hover {
     color: #222;
 }
-/*
-tbody.ledige-rom {
-	height: 200px;
-}
-thead.ledige-rom,
-tbody.ledige-rom {
-	width: 100%;
-}
-*/
