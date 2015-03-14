@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$pass = 'wB6JE4M6P8SazDGB';
-$db = 'prosjekt_pj2100';
+$host = 'tjener';
+$user = 'brukernavn';
+$pass = 'passord';
+$db = 'database';
 
 $conn = new mysqli($host, $user, $pass, $db);
 
