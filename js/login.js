@@ -3,7 +3,7 @@ $(document).ready(function() {
 	if (!checkCookie()) {
 		$(btnSearch).attr('disabled', true);
 		$(btnSearch).text('Logg inn');
-		$('.login').show();
+		$('#login').show();
 	}
 });
 function getCookie(cname) {

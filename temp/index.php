@@ -20,7 +20,7 @@
 						$sql = 'SELECT fornavn, etternavn, bo.romnr, booket_fra, booket_til
 								FROM booking bo
 								INNER JOIN rom r ON r.romnr = bo.romnr
-								INNER JOIN bruker br ON br.bruker_id = bo.bruker_id;';
+								INNER JOIN bruker br ON br.bruker_id = bo.bruker_id';
 
 						$array = $conn->query($sql);
 

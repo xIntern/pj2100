@@ -72,7 +72,7 @@ p.credits {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
-.login {
+.overlay {
 	position: fixed;
 	z-index: 2;
 	height: 100%;
@@ -80,7 +80,7 @@ p.credits {
 	background: rgba(0, 0, 0, 0.8);
 	display: none;
 }
-.login-popup {
+.popup {
 	width: 300px;
 	height: auto;
 	padding: 10px;
@@ -88,13 +88,13 @@ p.credits {
 	margin-top: 20px;
 	border-radius: 5px;
 }
-.login-popup h3 {
+.popup h3 {
 	margin: 10px;
 }
-.login-popup hr {
+.popup hr {
 	margin: 15px 0;
 }
-.login-popup input {
+.popup input {
 	margin: 5px 0;
 }
 .btn-login {
@@ -119,6 +119,17 @@ a.btn-technology {
 }
 .footer .col-lg-12 {
 	padding: 0;
+}
+#tid label {
+	float: left;
+}
+#tid select {
+	min-width: 80px;
+	float: right;
+}
+#tid .popup a {
+	margin-top: 5px;
+	width: 100%;
 }
 /*
 tbody.ledige-rom {
