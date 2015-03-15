@@ -46,6 +46,7 @@ ul.credits {
 	padding: 15px;
 	border-radius: 5px;
 	margin: 0;
+	display: none;
 }
 p.credits {
 	cursor: pointer;
@@ -142,6 +143,7 @@ a.btn-technology {
     width: 100%;
     z-index: 3;
     top: 25%;
+    padding: 25px;
     position: fixed;
     display: none;
 }
@@ -155,4 +157,7 @@ a.btn-technology {
 }
 .logout a:hover {
     color: #222;
+}
+.x-small {
+	font-size: 10px;
 }

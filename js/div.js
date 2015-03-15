@@ -17,7 +17,7 @@ $(document).ready(function() {
 	});
 
 	$('#dato').change(function() {
-		brukervalgt_tid();
+		brukervalgt_tid($('#tid p.romnr strong').text());
 	});
     
     $('.alert-dismissible').click(function() {
@@ -28,6 +28,14 @@ $(document).ready(function() {
     $('.logout').click(function() {
         delete_cookie('user_id', '/');
     });
+
+	$('.btn-book').click(function() {
+		var valgt_dato = $('#dato').val();
+		var valgt_klslett = $('#klokkeslett').val();
+		var romnr = $('#tid p.romnr strong').text();
+		booking(romnr, valgt_dato + ' ' + valgt_klslett + ':00:00', valgt_dato + ' ' + (parseInt(valgt_klslett) + parseInt($('#varighet').val())) + ':00:00');
+		$('#tid').hide();
+	});
 
 	$('a.btn-search').click(function() {
 		var kap = $('#select').val();
@@ -59,14 +67,6 @@ $(document).ready(function() {
 
 	function brukervalgt_tid(romnr) {
 
-		var velg_dato = new Date();
-		for (var i = 0; i < 30; i++) {
-			if (i > 0) {
-				velg_dato.setDate((velg_dato.getDate() + 1));
-			}
-			$('#dato').append('<option value="' + velg_dato.getFullYear() + '-' + velg_dato.getMonth() + "-" + velg_dato.getDate() + '">' + velg_dato.getDate() + "/" + (velg_dato.getMonth() + 1) + '</option>');
-		}
-
 		var kl_dato = new Date();
 		var selected_day_of_month = $('#dato').val();
 		var selected_day = selected_day_of_month.split('-');
@@ -90,10 +90,7 @@ $(document).ready(function() {
 				$('#klokkeslett').append('<option value="' + i + '">' + tid + ':00</option>');
 			}
 		}
-		$('.btn-book').click(function() {
-			booking(romnr, selected_day_of_month + ' ' + $('#klokkeslett').val() + ':00:00', selected_day_of_month + ' ' + (parseInt($('#klokkeslett').val()) + parseInt($('#varighet').val())) + ':00:00');
-			$('#tid').hide();
-		});
+		$('#tid p.romnr').html('(Romnr: <strong>' + romnr + '</strong>)');
 	}
 
 	function søk(kap, pro, comp, bla) {
@@ -107,13 +104,20 @@ $(document).ready(function() {
 
 				$('.result thead').html(headers);
 				$('.result tbody').html(data);
-				$('.result tr').click(function() {
+				$('.result td').click(function() {
 
-					var romnr = $(this).children('td:first-child').text();
-
-					brukervalgt_tid(romnr);
+					var romnr = $(this).parent().children('td:first-child').text();
 
 					$('#tid').show();
+					var velg_dato = new Date();
+					for (var i = 0; i < 30; i++) {
+						if (i > 0) {
+							velg_dato.setDate((velg_dato.getDate() + 1));
+						}
+						$('#dato').append('<option value="' + velg_dato.getFullYear() + '-' + velg_dato.getMonth() + "-" + velg_dato.getDate() + '">' + velg_dato.getDate() + "/" + (velg_dato.getMonth() + 1) + '</option>');
+					}
+
+					brukervalgt_tid(romnr);
 				});
 			}
 		});
