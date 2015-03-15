@@ -72,28 +72,21 @@ $(document).ready(function() {
 		var selected_day = selected_day_of_month.split('-');
 
 		if (selected_day[(selected_day.length - 1)] == kl_dato.getDate()) {
-			if (kl_dato.getHours() < 19) {
-				$('#klokkeslett').html('');
-				for (var i = kl_dato.getHours(); i <= 19; i++) {
-					var tid = i;
-					if (i < 10) {
-						tid = "" + 0 + tid;
-					}
-					$('#klokkeslett').removeAttr('disabled');
-					$('#klokkeslett').append('<option value="' + i + '">' + tid + ':00</option>');
-				}
-			} else {
-				$('#klokkeslett').attr('disabled', 'true');
-				$('#klokkeslett').html('<option selected disabled>Velg en annen dato</option>');
-			}
-		} else {
 			$('#klokkeslett').html('');
-			for (var i = 7; i <= 19; i++) {
+			for (var i = kl_dato.getHours(); i < 24; i++) {
 				var tid = i;
 				if (i < 10) {
 					tid = "" + 0 + tid;
 				}
-				$('#klokkeslett').removeAttr('disabled');
+				$('#klokkeslett').append('<option value="' + i + '">' + tid + ':00</option>');
+			}
+		} else {
+			$('#klokkeslett').html('');
+			for (var i = 0; i <= 24; i++) {
+				var tid = i;
+				if (i < 10) {
+					tid = "" + 0 + tid;
+				}
 				$('#klokkeslett').append('<option value="' + i + '">' + tid + ':00</option>');
 			}
 		}
