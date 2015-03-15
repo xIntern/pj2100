@@ -114,7 +114,7 @@ $(document).ready(function() {
 						if (i > 0) {
 							velg_dato.setDate((velg_dato.getDate() + 1));
 						}
-						$('#dato').append('<option value="' + velg_dato.getFullYear() + '-' + velg_dato.getMonth() + "-" + velg_dato.getDate() + '">' + velg_dato.getDate() + "/" + (velg_dato.getMonth() + 1) + '</option>');
+						$('#dato').append('<option value="' + velg_dato.getFullYear() + '-' + (velg_dato.getMonth() + 1) + "-" + velg_dato.getDate() + '">' + velg_dato.getDate() + "/" + (velg_dato.getMonth() + 1) + '</option>');
 					}
 
 					brukervalgt_tid(romnr);
