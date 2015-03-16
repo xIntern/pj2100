@@ -188,3 +188,12 @@ a.btn-technology {
 	color: #222;
 	text-decoration: underline;
 }
+table.oversikt tbody tr {
+	border-bottom: 1px solid #ddd;
+}
+table.oversikt tbody tr:last-of-type {
+	border: 0;
+}
+.oversikt {
+	display: none;
+}

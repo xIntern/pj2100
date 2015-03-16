@@ -29,6 +29,10 @@ $(document).ready(function() {
         delete_cookie('user_id', '/');
     });
 
+    $('#oversikt a').click(function() {
+    	bookede_rom();
+    });
+
 	$('.btn-book').click(function() {
 		var valgt_dato = $('#dato').val();
 		var valgt_klslett = $('#klokkeslett').val();
@@ -109,7 +113,7 @@ $(document).ready(function() {
 
 				var headers = '<tr><th>Romnr.</th><th>Kapasitet</th><th>Projektor</th><th>PC</th><th>Tavle</th></tr>';
 
-				$('.result thead').html(headers);
+				$('.result thead').html(headers).slideDown(500);
 				$('.result tbody').html(data);
 				$('.result td').click(function() {
 
@@ -143,6 +147,20 @@ $(document).ready(function() {
 			error: function() {
 				$(".ajax-response.alert-danger").text("Noe gikk galt. Prøv igjen");
 				$(".ajax-response.alert-danger").slideToggle(500).delay(3250).slideToggle(500);
+			}
+		});
+	}
+
+	function bookede_rom() {
+		$.ajax({
+			url: 'php/booked_times.php',
+			type: 'POST',
+			success: function(data) {
+				$('table.oversikt tbody').html(data);
+				$('table.oversikt').fadeToggle(500);
+			},
+			error: function() {
+				$('#oversikt').after('<p class="small text-center">Kunne ikke hente oversikten</p>');
 			}
 		});
 	}
