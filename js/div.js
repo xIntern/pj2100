@@ -156,8 +156,8 @@ $(document).ready(function() {
 			url: 'php/booked_times.php',
 			type: 'POST',
 			success: function(data) {
-				$('.booked').html(data);
-				$('.booked').slideToggle(1000);
+				$('table.oversikt tbody').html(data);
+				$('table.oversikt').fadeToggle(500);
 			},
 			error: function() {
 				$('#oversikt').after('<p class="small text-center">Kunne ikke hente oversikten</p>');
