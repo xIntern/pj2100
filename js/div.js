@@ -101,8 +101,10 @@ $(document).ready(function() {
 					if (i < 10) {
 						tid = "" + 0 + tid;
 					}
-					$('#klokkeslett').removeAttr('disabled');
-					$('#klokkeslett').append('<option value="' + i + '">' + tid + ':00</option>');
+					if (i >= aapner) { 
+						$('#klokkeslett').removeAttr('disabled');
+						$('#klokkeslett').append('<option value="' + i + '">' + tid + ':00</option>');
+					}
 				}
 			} else {
 				$('#klokkeslett').attr('disabled', 'true');
