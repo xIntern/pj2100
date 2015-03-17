@@ -10,6 +10,16 @@
 
 	$array = $conn->query($sql);
 
+	echo '<table class="table table-responsive table-hover oversikt text-center">
+			<thead>
+				<tr>
+					<th>Navn</th>
+					<th>Rom</th>
+					<th>Fra</th>
+					<th>Til</th>
+				</tr>
+			</thead>
+			<tbody>';
 
 	if ($array->num_rows > 0) {
 		while($row = $array->fetch_assoc()) {
@@ -19,20 +29,21 @@
 
 			$db_dag = date('dmy', $temp_fra);
 
-			$fra = date("D d-m H:i:s", $temp_fra);
-			$til = date("D d-m H:i:s", $temp_til);
+			$fra = date(/*"D d-m */"H:i", $temp_fra);
+			$til = date(/*"D d-m */"H:i", $temp_til);
 
 			if ($db_dag == $idag) {
 
 				echo '<tr>
-					<td>' . $row['fornavn'] . ' ' . $row['etternavn'] . '</td>
-					<td>' . $row['romnr'] . '</td>
-					<td>' . $fra . '</td>
-					<td>' . $til . '</td>
+						<td>' . $row['fornavn'] . ' ' . $row['etternavn'] . '</td>
+						<td>' . $row['romnr'] . '</td>
+						<td>' . $fra . '</td>
+						<td>' . $til . '</td>
 					</tr>';
 
 			}
 		}
 	}
+	echo '</tbody></table>';
 	$conn->close();
 ?>

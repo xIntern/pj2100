@@ -26,6 +26,14 @@
 		$sql .= ' WHERE ' . implode(' AND ', $filter) . ' ORDER BY projektor ASC, romnr ASC';
 	}
 
+	echo '<table class="table table-striped table-hover result">
+			<thead>
+				<tr>
+					<th>Romnr.</th><th>Kapasitet</th><th>Projektor</th><th>PC</th><th>Tavle</th>
+				</tr>
+			</thead><tbody>';
+						
+
 	$array = $conn->query($sql);
 	
 	if ($array->num_rows > 0) {
@@ -43,5 +51,6 @@
 	        </tr>';
 	    }
 	}
+	echo '</tbody></table>';
 	$conn->close();
 ?>

@@ -197,6 +197,6 @@ table.oversikt tr:last-of-type {
 table.oversikt th {
 	text-align: center;
 }
-.booked {
+.booked, #search-result {
 	display: none;
 }
