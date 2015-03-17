@@ -191,9 +191,12 @@ a.btn-technology {
 table.oversikt tbody tr {
 	border-bottom: 1px solid #ddd;
 }
-table.oversikt tbody tr:last-of-type {
+table.oversikt tr:last-of-type {
 	border: 0;
 }
-.oversikt {
+table.oversikt th {
+	text-align: center;
+}
+.booked {
 	display: none;
 }
