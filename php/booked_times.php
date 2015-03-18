@@ -1,7 +1,9 @@
 <?php
+	// Dagens dato formattert "dag mnd år" uten mellomrom
 	$idag = date('dmy');
 	require '../php/mysql.php';
 
+	// SQL-query
 	$sql = 'SELECT fornavn, etternavn, bo.romnr, booket_fra, booket_til
 			FROM booking bo
 			INNER JOIN rom r ON r.romnr = bo.romnr
@@ -10,6 +12,7 @@
 
 	$array = $conn->query($sql);
 
+	// Skriver ut
 	echo '<table class="table table-responsive table-hover oversikt text-center">
 			<thead>
 				<tr>
@@ -24,14 +27,17 @@
 	if ($array->num_rows > 0) {
 		while($row = $array->fetch_assoc()) {
 
+			// Lager dato-objekt fra tidene i databasen
 			$temp_fra = strtotime($row['booket_fra']);
 			$temp_til = strtotime($row['booket_til']);
 
 			$db_dag = date('dmy', $temp_fra);
 
-			$fra = date(/*"D d-m */"H:i", $temp_fra);
-			$til = date(/*"D d-m */"H:i", $temp_til);
+			// Skaffer time og minutter
+			$fra = date("H:i", $temp_fra);
+			$til = date("H:i", $temp_til);
 
+			// Sammenligner dagens dato og databasens. Skriver kun ut om disse er like
 			if ($db_dag == $idag) {
 
 				echo '<tr>
