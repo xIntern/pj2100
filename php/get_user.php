@@ -33,7 +33,7 @@
             while($row = $array->fetch_assoc()) {
                 if (isset($row['bruker_id'])) {
                     // Lager en cookie som inneholder en kryptert bruker-id.
-                    setcookie('user_id', sha1($row['bruker_id']), time() + (86400 * 7), "/");
+                    setcookie('user_id', sha1($row['bruker_id']), time() + (86400 * 7), "/pj2100");
                     // Sender bruker tilbake til siden
                     header('location:/pj2100');
                 }

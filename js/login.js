@@ -27,8 +27,7 @@ function getCookie(cname) {
 }
 // Sjekker om cookien eksisterer
 function checkCookie(cname) {
-    // var user = getCookie("user_id");
-    if (cname == "") {
+    if (getCookie(cname) == "") {
     	return false;
     } else {
     	return true;
