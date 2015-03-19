@@ -38,11 +38,6 @@ a, a:link, a:visited, a:hover, a:active {
 .result tbody:hover {
 	cursor: pointer;
 }
-@media screen and (max-width:767px) {
-	.table-responsive {
-		border: 0;
-	}
-}
 ul {
 	margin: 0;
 	list-style: none;
@@ -213,4 +208,19 @@ label * {
 }
 label input {
     top: 5px;
+}
+.bord {
+	height: 100px;
+	width: 100%;
+	background-size: 168px;
+	background-color: #75b9af;
+	background-image: url("../img/Monster_Westerdals_Baard_eksempel.svg");
+	background-repeat: repeat-x;
+	background-position: 0 5px;
+	margin-top: 20px;
+}
+@media screen and (max-width:767px) {
+	.table-responsive {
+		border: 0;
+	}
 }

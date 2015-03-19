@@ -33,7 +33,7 @@ $(document).ready(function() {
     
     // Sletter en cookie som inneholder SHA1-kryptert bruker-id
     $('.logout').click(function() {
-        delete_cookie('user_id', '/');
+        delete_cookie('user_id', '/pj2100');
     });
 
     // Kjører metoden "bookede_rom" når linken i id'en "oversikt" blir klikket på
