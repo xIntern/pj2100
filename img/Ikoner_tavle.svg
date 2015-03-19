@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#6D6E71;}
+	.st1{fill:#58595B;}
+	.st2{fill:#68B2E3;}
+	.st3{fill:#414042;}
+	.st4{fill:#76B9B0;}
+	.st5{fill:#F69580;}
+	.st6{fill:#FFDA7D;}
+</style>
+<g id="pc">
+</g>
+<g id="søk">
+</g>
+<g id="projektor">
+</g>
+<g id="tavle">
+</g>
+<g id="loggInn">
+</g>
+<g id="loggUt">
+</g>
+<g id="pcSirkel">
+</g>
+<g id="søkSirkel">
+</g>
+<g id="projektorSirkel">
+</g>
+<g id="tavleSirkel">
+</g>
+<g id="loggInnSirkel">
+</g>
+<g id="Layer_13">
+</g>
+<g id="pcHexa">
+</g>
+<g id="søkHexa">
+</g>
+<g id="projektorHexa">
+</g>
+<g id="tavleHexa">
+</g>
+<g id="loggInnHexa">
+</g>
+<g id="loggUtHexa">
+	<g id="XMLID_6_">
+		<g>
+			<path class="st1" d="M433.2,138.9v234.1c0,11.5-9.3,20.8-20.8,20.8h-18.6l-8.8-8.8h27.4c6.7,0,12-5.4,12-12V138.9
+				c0-6.7-5.4-12-12-12H126.9l-8.8-8.8h294.3C423.9,118.2,433.2,127.5,433.2,138.9z"/>
+			<path class="st1" d="M409.2,152.1v207.8c0,5.4-4.5,9.9-9.9,9.9h-29.5L142.2,142.2h257C404.7,142.2,409.2,146.7,409.2,152.1z"/>
+			<path class="st0" d="M393.9,393.9H99.6c-11.5,0-20.8-9.3-20.8-20.8V138.9c0-11.5,9.3-20.8,20.8-20.8h18.6l8.8,8.8H99.6
+				c-6.7,0-12,5.4-12,12v234.1c0,6.6,5.4,12,12,12h285.5L393.9,393.9z"/>
+			<path class="st0" d="M369.8,369.8h-257c-5.4,0-9.9-4.5-9.9-9.9V152.1c0-5.4,4.4-9.9,9.8-9.9h29.5L369.8,369.8z"/>
+		</g>
+	</g>
+</g>
+</svg>

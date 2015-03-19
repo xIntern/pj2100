@@ -1,4 +1,4 @@
-<!-- Krever jQuery -->
+<!-- Krever jQuery, php, mysql -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +23,11 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-        <p class="text-center"><strong>Byttet til en annen database. Alt skal fungere nå.</strong></p>
+        <h1 class="text-center">Guide til bruk av siden</h1>
+        <hr>
+        <p class="text-center"><strong>Steg 1: </strong>Logg inn</p>
+        <p class="text-center"><strong>Steg 2: </strong>Velg antall personer og hva du ønsker på rommet</p>
+        <p class="text-center"><strong>Steg 3: </strong>Velg tiden du ønsker å reservere rommet</p>
     </div>
 
 	<div id="login" class="container overlay">
@@ -79,7 +83,7 @@
 							</select>
 						</div>
 					</div>
-					<a href="#" class="btn btn-technology btn-book">Book rom</a>
+					<a href="#" class="btn btn-technology btn-book">Réserver</a>
 				</div>
 			</div>
 		</div>
@@ -87,7 +91,7 @@
 	
 	<div class="logout">
         <a href="" title="Logg ut">
-	        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+	        <img src="img/Ikoner_LoggUt.svg" alt="">
         </a>
 	</div>
 
@@ -104,7 +108,7 @@
 			<div class="col-md-1 col-lg-2"></div>
 			<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
 				<div class="panel panel-default">
-					<div class="panel-heading"><h3 class="text-center">Book rom (<abbr title="Christian Krohgs gate 32">CK32</abbr>)</h3></div>
+					<div class="panel-heading"><h3 class="text-center">Réserver rom</h3><h6 class="text-center">Christian Krohgs gate 32</h6></div>
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-sm-3 col-lg-3">
@@ -118,21 +122,21 @@
 							<div class="col-sm-2 col-lg-2">
 								<div class="checkbox">
 									<label>
-										<input id="projektor" type="checkbox"><h4 class="marg-auto">Projektor</h4>
+										<input id="projektor" type="checkbox"><img src="img/Ikoner_projektor.svg" alt=""><h4 class="marg-auto">Projektor</h4>
 									</label>
 								</div>
 							</div>
 							<div class="col-sm-2 col-lg-2">
 								<div class="checkbox">
 									<label>
-										<input id="pc" type="checkbox"><h4 class="marg-auto">PC</h4>
+										<input id="pc" type="checkbox"><img src="img/Ikoner_pc.svg" alt=""><h4 class="marg-auto">PC</h4>
 									</label>
 								</div>
 							</div>
 							<div class="col-sm-2 col-lg-2">
 								<div class="checkbox">
 									<label>
-										<input id="tavle" type="checkbox"><h4 class="marg-auto">Tavle</h4>
+										<input id="tavle" type="checkbox"><img src="img/Ikoner_tavle.svg" alt=""><h4 class="marg-auto">Tavle</h4>
 									</label>
 								</div>
 							</div>
@@ -168,7 +172,7 @@
 					<li>Simen Norløff</li>
 					<li>Andreas Larsen</li>
 					<li>Øyvind Mathisen</li>
-					<li class="x-small"><a href="https://github.com/xIntern/pj2100">Versjon 0.982</a></li>
+					<li class="x-small"><a href="https://github.com/xIntern/pj2100">Versjon 0.99</a></li>
 				</ul>
 				<p id="oversikt" class="text-center"><a href="#oversikt">Bookede rom i dag</a></p>
 				<div class="booked"></div>

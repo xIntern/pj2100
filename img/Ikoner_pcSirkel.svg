@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#6D6E71;}
+	.st1{fill:#58595B;}
+	.st2{fill:#68B2E3;}
+	.st3{fill:#414042;}
+	.st4{fill:#76B9B0;}
+	.st5{fill:#F69580;}
+	.st6{fill:#FFDA7D;}
+</style>
+<g id="pc">
+</g>
+<g id="søk">
+</g>
+<g id="projektor">
+</g>
+<g id="tavle">
+</g>
+<g id="loggInn">
+</g>
+<g id="loggUt">
+</g>
+<g id="pcSirkel">
+</g>
+<g id="søkSirkel">
+</g>
+<g id="projektorSirkel">
+</g>
+<g id="tavleSirkel">
+</g>
+<g id="loggInnSirkel">
+</g>
+<g id="Layer_13">
+</g>
+<g id="pcHexa">
+</g>
+<g id="søkHexa">
+</g>
+<g id="projektorHexa">
+</g>
+<g id="tavleHexa">
+</g>
+<g id="loggInnHexa">
+</g>
+<g id="loggUtHexa">
+	<g>
+		<g id="XMLID_20_">
+			<g>
+				<path class="st2" d="M256,0c141.4,0,256,114.6,256,256S397.4,512,256,512S0,397.4,0,256S114.6,0,256,0z M434,341.4V129.9
+					c0-7-5.7-12.6-12.6-12.6h-303H91.5c-7,0-12.6,5.7-12.6,12.6v211.5c0,7,5.7,12.6,12.6,12.6h263.6h66.3
+					C428.4,354,434,348.3,434,341.4z M197.3,432.9h118.4l-24.3-16.1l-15.1-53.5h-39.4l-15.1,53.8L197.3,432.9z"/>
+				<path d="M434,129.9v211.5c0,7-5.7,12.6-12.6,12.6h-66.3l-39.5-39.5h96.5c7.3,0,13.1-5.9,13.1-13.1V139.2
+					c0-7.3-5.9-13.2-13.1-13.2h-285l-8.8-8.8h303C428.4,117.2,434,122.9,434,129.9z"/>
+				<path class="st2" d="M425.3,139.2v162.2c0,7.3-5.9,13.1-13.1,13.1h-96.5H100.8c-7.3,0-13.2-5.9-13.2-13.1V139.2
+					c0-7.3,5.9-13.2,13.2-13.2h26.3h285C419.4,126,425.3,131.9,425.3,139.2z"/>
+				<path class="st3" d="M315.6,314.5l39.5,39.5H91.5c-7,0-12.6-5.7-12.6-12.6V129.9c0-7,5.7-12.6,12.6-12.6h26.8l8.8,8.8h-26.3
+					c-7.3,0-13.2,5.9-13.2,13.2v162.2c0,7.3,5.9,13.1,13.2,13.1H315.6z"/>
+				<polygon class="st3" points="315.6,432.9 197.3,432.9 221.6,417.1 236.7,363.3 276.2,363.3 291.3,416.8 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

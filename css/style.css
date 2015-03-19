@@ -160,7 +160,11 @@ a.btn-technology {
     position: fixed;
     display: none;
 }
+.melding > h1 {
+	margin-top: 0;
+}
 .logout {
+    width: 30px;
     top: 5px;
     right: 5px;
     position: absolute;
@@ -199,4 +203,14 @@ table.oversikt th {
 }
 .booked, #search-result {
 	display: none;
+}
+label img {
+    width: 40px;
+    margin-top: -5px;
+}
+label * {
+    display: inline;
+}
+label input {
+    top: 5px;
 }
